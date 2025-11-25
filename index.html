@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atlas Vet – Anatomía veterinaria digital</title>
+
+    <meta
+      name="description"
+      content="Atlas Vet unifica atlas, modelos 3D, casos clínicos y herramientas de evaluación para la enseñanza de la anatomía veterinaria en la FCV-UNR."
+    />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Iconos -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- CSS propio (desde /pages -> /css) -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- Favicon opcional -->
+    <!-- <link rel="icon" type="image/svg+xml" href="../img/favicon-atlas-vet.svg" /> -->
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html#inicio">
+          <img
+            src="../img/logo-atlas-vet.svg"
+            alt="Atlas Vet"
+            class="navbar-logo me-2"
+          />
+          <span>ATLAS VET</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center main-nav">
+            <li class="nav-item">
+              <!-- ESTA PÁGINA: Inicio activo -->
+              <a class="nav-link active" href="index.html#inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="catalogo.html">Catálogo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="modulos.html">Módulos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="plataformas.html">Plataformas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+              <!-- Explorador: lo más importante -->
+              <a href="atlas.html" class="nav-explorer-btn">
+                Explorador
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO: solo explicación general -->
+    <header class="hero d-flex align-items-center" id="inicio">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <p class="hero-kicker mb-2">
+              Facultad de Ciencias Veterinarias · UNR
+            </p>
+            <h1 class="display-5 fw-bold mb-3">
+              Anatomía veterinaria digital, en un solo lugar.
+            </h1>
+            <p class="lead mb-4">
+              Atlas Vet es un portal que reúne atlas, recursos 3D, casos
+              clínicos y herramientas de evaluación diseñadas para las cátedras
+              de anatomía de la FCV-UNR. Unifica todo lo que hoy está disperso
+              entre apps, PDFs y grupos sueltos.
+            </p>
+
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <a href="catalogo.html" class="btn btn-primary">
+                Ver catálogo de contenidos
+              </a>
+              <a href="atlas.html" class="btn btn-outline-light">
+                Probar explorador del atlas
+              </a>
+            </div>
+
+            <div class="hero-tags d-flex flex-wrap gap-2">
+              <span class="badge atlas-tag">Canino</span>
+              <span class="badge atlas-tag">Felino</span>
+              <span class="badge atlas-tag">Equino</span>
+              <span class="badge atlas-tag">Bovino</span>
+              <span class="badge atlas-tag">Sistema óseo</span>
+              <span class="badge atlas-tag">Sistema nervioso</span>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="hero-panel shadow-soft">
+              <div
+                class="hero-panel-header d-flex justify-content-between align-items-center mb-3"
+              >
+                <div>
+                  <span
+                    class="badge bg-primary-soft text-primary fw-semibold me-2"
+                  >
+                    Vista institucional
+                  </span>
+                  <span class="hero-panel-title">Pensado para la FCV-UNR</span>
+                </div>
+                <i class="fa-solid fa-paw fa-lg text-primary"></i>
+              </div>
+
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <div class="mini-card h-100">
+                    <h6 class="mb-1">Un solo acceso</h6>
+                    <p class="mini-muted mb-2">
+                      Punto de entrada único para estudiantes y docentes de
+                      todas las cátedras de anatomía.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="mini-card h-100">
+                    <h6 class="mb-1">Contenido curado</h6>
+                    <p class="mini-muted mb-2">
+                      Recursos revisados por docentes, integrando material
+                      propio y plataformas externas.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="mini-card h-100">
+                    <h6 class="mb-1">Enfoque por sistemas</h6>
+                    <p class="mini-muted mb-2">
+                      Navegación por especie y sistema para acompañar el
+                      programa de las materias.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="mini-card h-100">
+                    <h6 class="mb-1">Escalable</h6>
+                    <p class="mini-muted mb-2">
+                      Pensado para sumar nuevos modelos, casos y evaluaciones a
+                      lo largo del tiempo.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- SECCIÓN: Qué es Atlas Vet -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="section-header">
+          <h2>¿Qué es Atlas Vet?</h2>
+          <p>
+            Un proyecto de portal digital para anatomía veterinaria, que busca
+            centralizar recursos y mejorar la experiencia de estudio en la
+            FCV-UNR.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card-soft h-100">
+              <h5>Unificación de recursos</h5>
+              <p>
+                Reúne atlas 2D, modelos 3D, videos, casos clínicos y bancos de
+                preguntas que hoy están dispersos en distintas plataformas.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-soft h-100">
+              <h5>Enfoque académico</h5>
+              <p>
+                Se construye a partir de las necesidades reales de las cátedras,
+                respetando la terminología y los planes de estudio de la
+                facultad.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-soft h-100">
+              <h5>Base para futuros desarrollos</h5>
+              <p>
+                El portal puede conectarse a futuro con campus virtual,
+                analíticas de uso, y herramientas de autor para que los docentes
+                generen su propio material.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: Cómo funciona -->
+    <section class="py-5">
+      <div class="container">
+        <div class="section-header">
+          <h2>¿Cómo funciona?</h2>
+          <p>
+            El proyecto se organiza en módulos independientes. Cada módulo tiene
+            su propia página y puede crecer de forma gradual.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card-soft h-100">
+              <h5>1. Catálogo</h5>
+              <p>
+                Estructuras organizadas por especie y sistema. Desde aquí se
+                accede a todos los recursos disponibles para cada tema.
+              </p>
+              <a href="catalogo.html" class="btn btn-outline-primary btn-sm">
+                Ver catálogo
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-soft h-100">
+              <h5>2. Módulos didácticos</h5>
+              <p>
+                Conjunto de módulos: atlas 3D, correlación clínica, evaluaciones
+                y recursos abiertos. Cada módulo tiene objetivos claros.
+              </p>
+              <a href="modulos.html" class="btn btn-outline-primary btn-sm">
+                Ver módulos
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-soft h-100">
+              <h5>3. Plataformas asociadas</h5>
+              <p>
+                Integración con herramientas como Anatomage, EasyAnatomy, IVALA
+                Learn y proyectos de código abierto.
+              </p>
+              <a href="plataformas.html" class="btn btn-outline-primary btn-sm">
+                Ver plataformas
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: Para quién es -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="section-header">
+          <h2>¿Para quién está pensado?</h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card-soft h-100">
+              <h5>Estudiantes</h5>
+              <p>
+                Un lugar claro donde encontrar todo lo necesario para cursar
+                anatomía en cada año de la carrera, organizado por comisiones y
+                cátedras.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-soft h-100">
+              <h5>Docentes</h5>
+              <p>
+                Un entorno para compartir material, sugerir recursos y, a
+                futuro, cargar casos propios y bancos de preguntas.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-soft h-100">
+              <h5>Equipo institucional</h5>
+              <p>
+                Una base para medir uso de recursos, detectar necesidades y
+                coordinar proyectos de innovación educativa en anatomía.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="py-5">
+      <div class="container text-center">
+        <h2 class="mb-3">Prototipo abierto a colaboración</h2>
+        <p class="text-muted-custom mb-4 mx-auto" style="max-width: 640px">
+          Atlas Vet hoy es un prototipo en desarrollo. La idea es que docentes,
+          graduados y estudiantes avanzados puedan sumar contenido, validar la
+          propuesta y orientar las próximas etapas.
+        </p>
+        <a href="contacto.html" class="btn btn-primary">
+          Quiero saber cómo sumarme
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-4">
+      <div class="container text-center">
+        <p class="mb-1">
+          &copy; 2025 Atlas Vet · Facultad de Ciencias Veterinarias (UNR)
+        </p>
+        <p class="mb-0">
+          Prototipo de portal digital para la enseñanza de la anatomía
+          veterinaria.
+        </p>
+      </div>
+    </footer>
+
+    <!-- JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg" cx="30%" cy="20%" r="80%">
+      <stop offset="0%" stop-color="#0ea5e9"></stop>
+      <stop offset="60%" stop-color="#004b7c"></stop>
+      <stop offset="100%" stop-color="#001528"></stop>
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="64" height="64" rx="16" fill="url(#bg)"></rect>
+  <!-- círculo principal -->
+  <circle cx="32" cy="32" r="16" fill="#004b7c" stroke="#e5f2ff" stroke-width="1.6"></circle>
+  <!-- almohadilla -->
+  <circle cx="32" cy="36" r="5.4" fill="#ffffff"></circle>
+  <!-- dedos -->
+  <circle cx="25.8" cy="30.8" r="2.4" fill="#ffffff"></circle>
+  <circle cx="32" cy="29.4" r="2.4" fill="#ffffff"></circle>
+  <circle cx="38.2" cy="30.8" r="2.4" fill="#ffffff"></circle>
+  <!-- “destello 3D” -->
+  <rect x="37" y="37" width="7.5" height="3.1" rx="1.55" fill="#00b5a4" opacity="0.9"></rect>
+</svg>

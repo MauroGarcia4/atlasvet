@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo · Atlas Vet</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#inicio">
+      <img src="img/logo-atlas-vet.svg" alt="Atlas Vet" class="navbar-logo me-2">
+      <span>ATLAS VET</span>
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center main-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="../index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="catalogo.html">Catálogo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="modulos.html">Módulos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="plataformas.html">Plataformas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contacto.html">Contacto</a>
+        </li>
+        <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+          <!-- Explorador: lo más importante -->
+          <a href="atlas.html" class="nav-explorer-btn">
+            Explorador
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- CONTENIDO -->
+  <main class="py-5" style="padding-top: 6rem !important;">
+    <div class="container">
+      <div class="section-header">
+        <h1>Catálogo por especie y sistema</h1>
+        <p>
+          Punto de entrada al contenido del atlas. Desde aquí se navega por especie
+          (canino, felino, equino, bovino, aves) y por sistema anatómico.
+        </p>
+      </div>
+
+      <!-- Filtros principales -->
+      <div class="mb-4 text-center">
+        <div class="catalog-pills-row">
+          <button class="catalog-pill">
+            <i class="fa-solid fa-dog"></i> Canino
+          </button>
+          <button class="catalog-pill">
+            <i class="fa-solid fa-cat"></i> Felino
+          </button>
+          <button class="catalog-pill">
+            <i class="fa-solid fa-horse"></i> Equino
+          </button>
+          <button class="catalog-pill">
+            <i class="fa-solid fa-cow"></i> Bovino
+          </button>
+          <button class="catalog-pill">
+            <i class="fa-solid fa-dove"></i> Aves
+          </button>
+        </div>
+      </div>
+
+      <!-- Tabla / grilla resumen -->
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="card-soft h-100">
+            <h5>Canino</h5>
+            <p class="mb-2 text-muted-custom">
+              Especie base para la mayoría de las cátedras. Incluye vistas por
+              sistema y por región.
+            </p>
+            <ul class="mb-0 text-muted-custom">
+              <li>Sistema óseo (miembro torácico, pélvico, columna, cráneo).</li>
+              <li>Miología (planos superficiales y profundos).</li>
+              <li>Sistema nervioso periférico y central.</li>
+              <li>Atlas de órganos y vísceras por cavidad.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card-soft h-100">
+            <h5>Equino</h5>
+            <p class="mb-2 text-muted-custom">
+              Foco en regiones de interés clínico (miembros y cabeza), con
+              correlación con ortopedia y odontología.
+            </p>
+            <ul class="mb-0 text-muted-custom">
+              <li>Miembro torácico y pélvico con vistas 3D y cortes.</li>
+              <li>Cráneo y dentición con énfasis en puntos de referencia.</li>
+              <li>Vasos y nervios relevantes para bloqueos.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card-soft h-100">
+            <h5>Felino</h5>
+            <p class="mb-2 text-muted-custom">
+              Contenido comparado con canino, resaltando diferencias relevantes
+              para interpretación clínica e imagenológica.
+            </p>
+            <ul class="mb-0 text-muted-custom">
+              <li>Esqueleto axial y apendicular.</li>
+              <li>Variantes musculares frecuentes.</li>
+              <li>Vistas de tórax y abdomen para radiología básica.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card-soft h-100">
+            <h5>Bovino y aves</h5>
+            <p class="mb-2 text-muted-custom">
+              Contenido orientado a producción y clínica de grandes animales,
+              con énfasis en sistemas digestivo, cardiopulmonar y reproductor.
+            </p>
+            <ul class="mb-0 text-muted-custom">
+              <li>Sistemas digestivo y respiratorio comparados.</li>
+              <li>Anatomía del pezón y glándula mamaria.</li>
+              <li>Sistema respiratorio y sacos aéreos en aves.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <p class="text-muted-custom mb-2">
+          En futuras etapas, este catálogo se conectará con una base de datos
+          real de estructuras y recursos.
+        </p>
+        <a href="atlas.html" class="btn btn-primary">
+          Ir al explorador del atlas
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-4">
+    <div class="container text-center">
+      <p class="mb-1">&copy; 2025 Atlas Vet · Facultad de Ciencias Veterinarias (UNR)</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,747 @@
+/* ================================================================
+   ATLAS VET – ESTILOS GENERALES
+   Proyecto estático con Bootstrap 5.
+   Este archivo puede reemplazar por completo al style.css anterior.
+   ================================================================ */
+
+/* ---------------------- PALETA & TOKENS ----------------------- */
+
+:root {
+  /* Colores principales (inspirados en FCV-UNR) */
+  --color-primary: #004b7c;
+  --color-primary-dark: #002f52;
+  --color-primary-soft: #e0effa;
+
+  --color-accent: #00b5a4;
+  --color-accent-soft: #e0fbf7;
+
+  --color-bg: #f3f6fb;
+  --color-surface: #ffffff;
+
+  --color-text: #0f172a;
+  --color-muted: #6b7280;
+
+  --color-border-soft: #d8e2f0;
+  --color-border-strong: #9ca3af;
+
+  --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.12);
+  --shadow-card: 0 10px 28px rgba(15, 23, 42, 0.08);
+
+  --radius-lg: 1.4rem;
+  --radius-md: 0.9rem;
+  --radius-pill: 999px;
+}
+
+/* ---------------------- RESETEO BÁSICO ------------------------ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.5;
+}
+
+/* Quitar subrayado azul feo en links por defecto */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+/* Contenedores un poco más anchos en escritorio */
+.container {
+  max-width: 1120px;
+}
+
+/* ------------------------ NAVBAR ------------------------------ */
+
+.navbar {
+  background-color: var(--color-primary-dark);
+  padding-top: 0.65rem;
+  padding-bottom: 0.65rem;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 0.9rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(248, 250, 252, 0.9);
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding-inline: 0.9rem;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #ffffff;
+}
+
+.navbar .btn-outline-light {
+  border-radius: var(--radius-pill);
+  padding-inline: 1.25rem;
+  font-size: 0.85rem;
+}
+
+/* Espacio para evitar que la navbar fija tape el contenido */
+body > main,
+body > header,
+body > section:first-of-type {
+  scroll-margin-top: 76px;
+}
+
+/* ------------------------ HERO (INDEX) ------------------------ */
+
+.hero {
+  background: radial-gradient(circle at top left, #0a67b3 0, #002a4c 45%, #020617 100%);
+  color: #ffffff;
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  padding: 7rem 0 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 0, rgba(59, 130, 246, 0.35), transparent 55%),
+              radial-gradient(circle at 80% 100%, rgba(56, 189, 248, 0.25), transparent 55%);
+  opacity: 0.8;
+}
+
+.hero > .container {
+  position: relative;
+}
+
+/* Textos hero */
+
+.hero-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.75rem;
+  color: rgb(191, 219, 254);
+}
+
+.hero h1 {
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.hero .lead {
+  color: rgba(241, 245, 249, 0.9);
+}
+
+/* Botones hero */
+
+.hero .btn-primary {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  border-color: transparent;
+  border-radius: var(--radius-pill);
+  padding-inline: 1.7rem;
+  font-weight: 600;
+  box-shadow: 0 14px 35px rgba(37, 99, 235, 0.5);
+}
+
+.hero .btn-primary:hover {
+  filter: brightness(1.05);
+  box-shadow: 0 16px 40px rgba(37, 99, 235, 0.7);
+}
+
+.hero .btn-outline-light {
+  border-radius: var(--radius-pill);
+  border-width: 1px;
+  padding-inline: 1.4rem;
+  color: #e5e7eb;
+}
+
+/* Panel lateral en hero */
+
+.hero-panel {
+  background: radial-gradient(circle at top left, rgba(15, 118, 110, 0.14), transparent 60%),
+              rgba(15, 23, 42, 0.92);
+  border-radius: 1.5rem;
+  padding: 1.4rem 1.6rem;
+  color: #e5e7eb;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+.hero-panel-header {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+  padding-bottom: 0.6rem;
+  margin-bottom: 0.9rem;
+}
+
+.hero-panel-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+.badge.bg-primary-soft {
+  background-color: rgba(59, 130, 246, 0.12);
+  color: #bfdbfe;
+}
+
+.mini-card {
+  background-color: rgba(15, 23, 42, 0.8);
+  border-radius: 0.9rem;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid rgba(30, 64, 175, 0.35);
+}
+
+.mini-muted {
+  font-size: 0.8rem;
+  color: rgba(148, 163, 184, 0.95);
+}
+
+/* Chips del hero */
+
+.hero-tags {
+  margin-top: 0.5rem;
+}
+
+.hero-tags .badge.atlas-tag {
+  background-color: rgba(15, 23, 42, 0.75);
+  border-radius: var(--radius-pill);
+  padding: 0.35rem 0.9rem;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  font-weight: 500;
+  font-size: 0.82rem;
+}
+
+/* ------------------------ SECCIONES GENERALES ----------------- */
+
+.section-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 2.75rem;
+}
+
+.section-header h1,
+.section-header h2 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.65rem;
+  color: var(--color-text);
+}
+
+.section-header p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+/* Cards genéricas */
+
+.card-soft,
+.module-card,
+.resource-card,
+.contact-card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 1.6rem 1.7rem;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  box-shadow: var(--shadow-card);
+}
+
+.card-soft h5,
+.module-card h5,
+.resource-card h5 {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.card-soft p,
+.module-card p,
+.resource-card p {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+}
+
+/* Hover sutil en tarjetas clicables */
+
+.card-soft:hover,
+.module-card:hover,
+.resource-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.16);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+/* Texto apagado personalizado */
+
+.text-muted-custom {
+  color: var(--color-muted);
+}
+
+/* Secciones alternadas */
+
+section.bg-light {
+  background-color: #edf2fb !important;
+}
+
+/* ------------------------ CATÁLOGO ---------------------------- */
+
+.catalog-pills-row {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+}
+
+.catalog-pill {
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border-soft);
+  background-color: #f9fbff;
+  padding: 0.4rem 1.1rem;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
+}
+
+.catalog-pill i {
+  font-size: 0.9rem;
+}
+
+.catalog-pill:hover {
+  background-color: var(--color-primary-soft);
+  border-color: #93c5fd;
+}
+
+/* ------------------------ MÓDULOS ----------------------------- */
+
+.module-card {
+  text-align: center;
+}
+
+.module-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.9rem;
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-size: 1.25rem;
+}
+
+/* ------------------------ PLATAFORMAS ------------------------- */
+
+.resource-card .btn-outline-primary,
+.card-soft .btn-outline-primary {
+  border-radius: var(--radius-pill);
+  font-size: 0.86rem;
+  padding-inline: 1.05rem;
+}
+
+/* ------------------------ CONTACTO ---------------------------- */
+
+.contact-card {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.contact-card form .form-label {
+  font-weight: 500;
+  font-size: 0.92rem;
+}
+
+.contact-card .form-control,
+.contact-card .form-select {
+  border-radius: 0.8rem;
+  border-color: var(--color-border-soft);
+  padding: 0.6rem 0.75rem;
+}
+
+.contact-card .form-control:focus,
+.contact-card .form-select:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.15);
+}
+
+/* ------------------------ EXPLORADOR DEL ATLAS --------------- */
+/* Nota: estos estilos asumen una estructura con clases:
+   .atlas-page, .atlas-layout, .atlas-sidebar, .atlas-main,
+   .atlas-preview, .atlas-badges, .atlas-item, etc.
+   Si tu HTML usa otros nombres, podés adaptar fácilmente.        */
+
+.atlas-page {
+  background-color: #e5edf9;
+  min-height: 100vh;
+  padding-top: 6rem;
+  padding-bottom: 3rem;
+}
+
+.atlas-layout {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr) 320px;
+  gap: 1.6rem;
+}
+
+/* Sidebar izquierda (especies y sistemas) */
+
+.atlas-sidebar {
+  align-self: flex-start;
+}
+
+.atlas-sidebar-card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 1.1rem 1.2rem;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  box-shadow: var(--shadow-card);
+  margin-bottom: 1rem;
+}
+
+.atlas-sidebar h5 {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-muted);
+  margin-bottom: 0.8rem;
+}
+
+.atlas-chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.atlas-chip {
+  border-radius: var(--radius-pill);
+  padding: 0.35rem 0.85rem;
+  font-size: 0.86rem;
+  border: 1px solid var(--color-border-soft);
+  background-color: #f9fbff;
+  cursor: pointer;
+}
+
+.atlas-chip.active {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border-color: var(--color-primary);
+}
+
+/* Buscador y filtros */
+
+.atlas-filters {
+  margin-bottom: 1rem;
+}
+
+.atlas-search {
+  background-color: #ffffff;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border-soft);
+  padding: 0.45rem 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.atlas-search input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.atlas-search i {
+  color: var(--color-muted);
+}
+
+/* Badges de tipo de recurso */
+
+.atlas-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.7rem;
+}
+
+.atlas-badge {
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(148, 163, 184, 0.55);
+  padding: 0.23rem 0.7rem;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Lista de estructuras (centro) */
+
+.atlas-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.atlas-item {
+  background-color: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 1.05rem 1.2rem;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+}
+
+.atlas-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.4rem;
+}
+
+.atlas-item-title {
+  font-weight: 600;
+  margin: 0;
+}
+
+.atlas-item-meta {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+}
+
+.atlas-item-label {
+  padding: 0.15rem 0.6rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.78rem;
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+/* Tags de recursos dentro de cada item */
+
+.atlas-item-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.atlas-item-tag {
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  padding: 0.25rem 0.65rem;
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Panel derecho (vista previa) */
+
+.atlas-preview {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 1.3rem 1.4rem;
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  align-self: flex-start;
+}
+
+.atlas-preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+
+.atlas-preview-title {
+  font-weight: 600;
+  margin: 0;
+}
+
+.atlas-preview-body {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.atlas-preview .btn-primary {
+  border-radius: var(--radius-pill);
+  font-size: 0.9rem;
+  padding-inline: 1.4rem;
+}
+
+/* ------------------------ FOOTER ------------------------------ */
+
+footer {
+  background-color: #020617;
+  color: #e5e7eb;
+}
+
+footer p {
+  margin-bottom: 0.25rem;
+}
+
+footer a {
+  color: #93c5fd;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+/* ------------------------ BREAKPOINTS ------------------------- */
+
+@media (max-width: 991.98px) {
+  .hero {
+    text-align: center;
+  }
+
+  .hero-panel {
+    margin-top: 2.25rem;
+  }
+
+  .navbar-collapse {
+    background-color: var(--color-primary-dark);
+    border-radius: 0 0 1rem 1rem;
+    padding: 0.5rem 0.75rem 0.75rem;
+    margin-top: 0.35rem;
+  }
+
+  .atlas-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .atlas-preview {
+    order: -1;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero {
+    padding-top: 6.5rem;
+    padding-bottom: 3.5rem;
+    min-height: auto;
+  }
+
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+
+  .hero .lead {
+    font-size: 0.98rem;
+  }
+
+  .card-soft,
+  .module-card,
+  .resource-card,
+  .contact-card {
+    padding: 1.3rem 1.25rem;
+  }
+
+  .atlas-item {
+    padding: 0.9rem 0.95rem;
+  }
+}
+
+/* NAVBAR general */
+.navbar {
+  background-color: var(--color-primary-dark);
+  padding-top: 0.55rem;
+  padding-bottom: 0.55rem;
+}
+
+/* Logo */
+.navbar-logo {
+  height: 24px;
+  width: auto;
+  display: block;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 0.9rem;
+}
+
+/* Links */
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(248, 250, 252, 0.8);
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px; /* para que el active se vea suave */
+}
+
+/* Hover */
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+/* Active, como en tu captura */
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #ffffff;
+  background-color: rgba(15, 23, 42, 0.25);
+  border: 1px solid rgba(248, 250, 252, 0.9);
+}
+
+/* Botón Contacto */
+.nav-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid rgba(248, 250, 252, 0.9);
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background-color: transparent;
+}
+
+.nav-contact-btn:hover {
+  background-color: #ffffff;
+  color: var(--color-primary-dark);
+  text-decoration: none;
+}
+
+/* Mobile */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: var(--color-primary-dark);
+    border-radius: 0 0 1rem 1rem;
+    padding: 0.5rem 0.75rem 0.75rem;
+    margin-top: 0.35rem;
+  }
+
+  .navbar-dark .navbar-nav .nav-link.active {
+    background-color: rgba(15, 23, 42, 0.5);
+  }
+
+  .nav-contact-btn {
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.35rem;
+  }
+}
+

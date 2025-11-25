@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atlas Vet – Explorador del atlas</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+      <div class="container">
+        <a
+          class="navbar-brand d-flex align-items-center"
+          href="../index.html#inicio"
+        >
+          <img
+            src="../img/logo-atlas-vet.svg"
+            alt="Atlas Vet"
+            class="navbar-logo me-2"
+          />
+          <span>ATLAS VET</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center main-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="catalogo.html">Catálogo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="modulos.html">Módulos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="plataformas.html"
+                >Plataformas</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+              <!-- Acá marcamos el explorador como actual -->
+              <a href="atlas.html" class="nav-explorer-btn is-current">
+                Explorador
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="atlas-page">
+      <div class="container">
+        <p class="text-uppercase small text-muted mb-1">
+          Explorador del atlas · Vista beta
+        </p>
+        <h1 class="h3 mb-2">Atlas interactivo de anatomía veterinaria</h1>
+        <p class="text-muted-custom mb-4">
+          Buscá estructuras por nombre, especie o sistema, y visualizá qué
+          recursos están disponibles (2D, 3D, casos clínicos, quizzes).
+        </p>
+
+        <!-- Layout en 3 columnas (sidebar – lista – preview) -->
+        <div class="atlas-layout">
+          <!-- SIDEBAR IZQUIERDA -->
+          <aside class="atlas-sidebar">
+            <div class="atlas-sidebar-card">
+              <h5><i class="fa-solid fa-paw me-1"></i> Especies</h5>
+              <div class="atlas-chip-group">
+                <button class="atlas-chip active">Canino</button>
+                <button class="atlas-chip">Felino</button>
+                <button class="atlas-chip">Equino</button>
+                <button class="atlas-chip">Bovino</button>
+                <button class="atlas-chip">Aves</button>
+              </div>
+            </div>
+
+            <div class="atlas-sidebar-card">
+              <h5><i class="fa-solid fa-layer-group me-1"></i> Sistemas</h5>
+              <div class="atlas-chip-group">
+                <button class="atlas-chip active">Sistema óseo</button>
+                <button class="atlas-chip">Miología</button>
+                <button class="atlas-chip">Nervioso</button>
+                <button class="atlas-chip">Cardiovascular</button>
+                <button class="atlas-chip">Digestivo</button>
+              </div>
+            </div>
+          </aside>
+
+          <!-- LISTA CENTRAL -->
+          <section class="atlas-main">
+            <!-- buscador + filtros -->
+            <div class="atlas-filters mb-3">
+              <div class="atlas-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input
+                  type="text"
+                  placeholder="Buscar estructura (ej. 'húmero', 'carpo', 'plexo braquial')"
+                />
+              </div>
+              <div class="atlas-badges">
+                <span class="atlas-badge">Todo</span>
+                <span class="atlas-badge">
+                  <i class="fa-regular fa-image"></i> Atlas 2D
+                </span>
+                <span class="atlas-badge">
+                  <i class="fa-solid fa-cube"></i> 3D / modelos
+                </span>
+                <span class="atlas-badge">
+                  <i class="fa-solid fa-notes-medical"></i> Casos clínicos
+                </span>
+                <span class="atlas-badge">
+                  <i class="fa-regular fa-circle-question"></i> Quizzes
+                </span>
+              </div>
+            </div>
+
+            <!-- ITEMS DE EJEMPLO -->
+            <div class="atlas-list">
+              <!-- Húmero -->
+              <article class="atlas-item">
+                <div class="atlas-item-header">
+                  <div>
+                    <h2 class="atlas-item-title h6 mb-1">Húmero</h2>
+                    <div class="atlas-item-meta">
+                      Canino · Sistema óseo · Miembro torácico
+                    </div>
+                  </div>
+                  <span class="atlas-item-label">Alta prioridad</span>
+                </div>
+                <p class="mb-2">
+                  Vista comparada de húmero derecho e izquierdo, puntos de
+                  referencia para palpación y correlación con fracturas
+                  frecuentes.
+                </p>
+                <div class="atlas-item-tags">
+                  <span class="atlas-item-tag">
+                    <i class="fa-regular fa-image"></i> Atlas 2D (canino/equino)
+                  </span>
+                  <span class="atlas-item-tag">
+                    <i class="fa-solid fa-cube"></i> Modelo 3D interactivo
+                  </span>
+                  <span class="atlas-item-tag">
+                    <i class="fa-solid fa-bolt"></i> Quiz 15 preguntas
+                  </span>
+                </div>
+              </article>
+
+              <!-- Cráneo -->
+              <article class="atlas-item">
+                <div class="atlas-item-header">
+                  <div>
+                    <h2 class="atlas-item-title h6 mb-1">Cráneo</h2>
+                    <div class="atlas-item-meta">
+                      Felino · Sistema óseo · Cabeza
+                    </div>
+                  </div>
+                  <span
+                    class="atlas-item-label"
+                    style="background-color: #fef9c3; color: #854d0e"
+                  >
+                    En desarrollo
+                  </span>
+                </div>
+                <p class="mb-2">
+                  Suturas, senos y referencias para abordajes quirúrgicos
+                  básicos. Incluye vistas radiográficas comparadas.
+                </p>
+                <div class="atlas-item-tags">
+                  <span class="atlas-item-tag">
+                    <i class="fa-regular fa-image"></i> Atlas 2D
+                  </span>
+                  <span class="atlas-item-tag">
+                    <i class="fa-solid fa-stethoscope"></i> Caso clínico
+                    (trauma)
+                  </span>
+                </div>
+              </article>
+
+              <!-- Plexo braquial -->
+              <article class="atlas-item">
+                <div class="atlas-item-header">
+                  <div>
+                    <h2 class="atlas-item-title h6 mb-1">Plexo braquial</h2>
+                    <div class="atlas-item-meta">
+                      Canino · Sistema nervioso periférico
+                    </div>
+                  </div>
+                </div>
+                <p class="mb-2">
+                  Trayecto de raíces nerviosas, ramos principales y correlación
+                  con déficit neurológicos en miembros torácicos.
+                </p>
+                <div class="atlas-item-tags">
+                  <span class="atlas-item-tag">
+                    <i class="fa-solid fa-cube"></i> Modelo 3D
+                  </span>
+                  <span class="atlas-item-tag">
+                    <i class="fa-solid fa-bolt"></i> Mini-quiz 10 preguntas
+                  </span>
+                </div>
+              </article>
+
+              <!-- Corazón -->
+              <article class="atlas-item">
+                <div class="atlas-item-header">
+                  <div>
+                    <h2 class="atlas-item-title h6 mb-1">Corazón</h2>
+                    <div class="atlas-item-meta">
+                      Equino · Sistema cardiovascular
+                    </div>
+                  </div>
+                </div>
+                <p class="mb-2">
+                  Cavidades, válvulas y grandes vasos con vistas seccionadas y
+                  relación con puntos de auscultación.
+                </p>
+                <div class="atlas-item-tags">
+                  <span class="atlas-item-tag">
+                    <i class="fa-regular fa-image"></i> Cortes esquemáticos
+                  </span>
+                  <span class="atlas-item-tag">
+                    <i class="fa-solid fa-stethoscope"></i> Casos clínicos
+                    (soplos)
+                  </span>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- PANEL DERECHO – VISTA PREVIA -->
+          <aside class="atlas-preview">
+            <div class="atlas-preview-header">
+              <div>
+                <h2 class="atlas-preview-title h6 mb-1">
+                  Vista previa del recurso
+                </h2>
+                <p class="mb-0 small text-muted-custom">
+                  Acá se mostrará una captura del modelo 3D o atlas
+                  seleccionado.
+                </p>
+              </div>
+              <div
+                class="d-inline-flex justify-content-center align-items-center border rounded-circle"
+                style="width: 38px; height: 38px"
+              >
+                <i class="fa-solid fa-cube"></i>
+              </div>
+            </div>
+
+            <div class="ratio ratio-16x9 mb-3">
+              <div
+                class="d-flex align-items-center justify-content-center rounded"
+                style="
+                  background: radial-gradient(circle at top, #dbeafe, #bfdbfe);
+                  border: 1px solid rgba(148, 163, 184, 0.6);
+                "
+              >
+                <i class="fa-solid fa-paw fa-2x text-primary"></i>
+              </div>
+            </div>
+
+            <div class="atlas-preview-body mb-3">
+              <ul class="mb-2">
+                <li>Capas activables (piel, musculatura, hueso, nervios).</li>
+                <li>Marcadores con nombres oficiales y abreviaturas.</li>
+                <li>Atajos para saltar a otras estructuras relacionadas.</li>
+              </ul>
+            </div>
+
+            <button class="btn btn-primary w-100">
+              Ver recurso completo (demo)
+            </button>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-4 mt-4">
+      <div class="container text-center">
+        <p class="mb-1">
+          © 2025 Atlas Vet · Facultad de Ciencias Veterinarias (UNR).
+        </p>
+        <p class="mb-0">
+          Prototipo de interfaz para exploración de anatomía veterinaria
+          digital.
+        </p>
+      </div>
+    </footer>
+
+    <!-- JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
