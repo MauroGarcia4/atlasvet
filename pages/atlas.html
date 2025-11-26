@@ -14,9 +14,17 @@
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       rel="stylesheet"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <!-- CSS propio -->
     <link rel="stylesheet" href="../css/style.css" />
+    <!-- Favicon -->
+    <link rel="icon" href="../img/favicon-atlas-vet.svg" type="image/svg+xml" />
+    <!-- Preconnect para rendimiento -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
@@ -25,12 +33,8 @@
           class="navbar-brand d-flex align-items-center"
           href="../index.html#inicio"
         >
-          <img
-            src="../img/logo-atlas-vet.svg"
-            alt="Atlas Vet"
-            class="navbar-logo me-2"
-          />
-          <span>ATLAS VET</span>
+          <img src="../img/logo-atlas-vet-mark.svg" alt="Marca Atlas Vet" class="navbar-logo me-2" width="40" height="40">
+          <!-- Texto del nombre removido; usamos solo el logo -->
         </a>
 
         <button
@@ -75,24 +79,58 @@
       </div>
     </nav>
 
+    <!-- HERO ATLAS -->
+    <header class="hero d-flex align-items-center" id="page-hero">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8">
+            <p class="hero-kicker mb-2">
+              Explorador interactivo · Atlas Vet
+            </p>
+            <h1 class="display-5 fw-bold mb-3">
+              Explorá las estructuras anatómicas.
+            </h1>
+            <p class="lead mb-4">
+              Buscá estructuras por nombre, especie o sistema. Visualizá qué
+              recursos están disponibles: atlas 2D, modelos 3D interactivos,
+              casos clínicos y evaluaciones. Un explorador pensado para el
+              aprendizaje activo.
+            </p>
+
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <a href="catalogo.html" class="btn btn-primary">
+                Ver catálogo 📚
+              </a>
+              <a href="contacto.html" class="btn btn-outline-light">
+                Contacto y colaboración 💬
+              </a>
+            </div>
+
+            <div class="hero-tags d-flex flex-wrap gap-2">
+              <span class="badge atlas-tag">Búsqueda 🔍</span>
+              <span class="badge atlas-tag">Canino 🐶</span>
+              <span class="badge atlas-tag">Estructuras 🦴</span>
+              <span class="badge atlas-tag">Sistemas 🫀</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
     <!-- CONTENIDO PRINCIPAL -->
     <main class="atlas-page">
       <div class="container">
-        <p class="text-uppercase small text-muted mb-1">
-          Explorador del atlas · Vista beta
-        </p>
-        <h1 class="h3 mb-2">Atlas interactivo de anatomía veterinaria</h1>
-        <p class="text-muted-custom mb-4">
-          Buscá estructuras por nombre, especie o sistema, y visualizá qué
-          recursos están disponibles (2D, 3D, casos clínicos, quizzes).
-        </p>
+        <div class="section-header" style="margin-bottom: 1.5rem;">
+          <h2>Explorador de estructuras</h2>
+          <p>Selecciona una especie o sistema y comenzá la exploración.</p>
+        </div>
 
         <!-- Layout en 3 columnas (sidebar – lista – preview) -->
         <div class="atlas-layout">
           <!-- SIDEBAR IZQUIERDA -->
           <aside class="atlas-sidebar">
             <div class="atlas-sidebar-card">
-              <h5><i class="fa-solid fa-paw me-1"></i> Especies</h5>
+              <h5><i class="fa-solid fa-paw me-1"></i> Especies 🐾</h5>
               <div class="atlas-chip-group">
                 <button class="atlas-chip active">Canino</button>
                 <button class="atlas-chip">Felino</button>
@@ -103,7 +141,7 @@
             </div>
 
             <div class="atlas-sidebar-card">
-              <h5><i class="fa-solid fa-layer-group me-1"></i> Sistemas</h5>
+              <h5><i class="fa-solid fa-layer-group me-1"></i> Sistemas ⚙️</h5>
               <div class="atlas-chip-group">
                 <button class="atlas-chip active">Sistema óseo</button>
                 <button class="atlas-chip">Miología</button>
@@ -304,19 +342,98 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="py-4 mt-4">
-      <div class="container text-center">
-        <p class="mb-1">
-          © 2025 Atlas Vet · Facultad de Ciencias Veterinarias (UNR).
-        </p>
-        <p class="mb-0">
-          Prototipo de interfaz para exploración de anatomía veterinaria
-          digital.
-        </p>
+    <footer class="mt-auto">
+      <div class="container py-5">
+        <div class="row g-4 mb-4">
+          <!-- Columna 1: Acerca de -->
+          <div class="col-md-3">
+            <h6 class="footer-title">Acerca de Atlas Vet</h6>
+            <p class="footer-text">
+              Plataforma educativa de anatomía veterinaria de la Facultad de Ciencias Veterinarias de la Universidad Nacional de Rosario (UNR).
+            </p>
+            <div class="footer-social">
+              <a href="#" title="LinkedIn" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="#" title="GitHub" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="#" title="Twitter" aria-label="Twitter">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Columna 2: Navegación -->
+          <div class="col-md-3">
+            <h6 class="footer-title">Navegación</h6>
+            <ul class="footer-links">
+              <li><a href="../index.html">Inicio</a></li>
+              <li><a href="catalogo.html">Catálogo</a></li>
+              <li><a href="modulos.html">Módulos</a></li>
+              <li><a href="plataformas.html">Plataformas</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+              <li><a href="atlas.html">Explorador</a></li>
+            </ul>
+          </div>
+
+          <!-- Columna 3: Recursos -->
+          <div class="col-md-3">
+            <h6 class="footer-title">Recursos</h6>
+            <ul class="footer-links">
+              <li><a href="plataformas.html">Herramientas 3D</a></li>
+              <li><a href="catalogo.html">Atlas interactivo</a></li>
+              <li><a href="modulos.html">Casos clínicos</a></li>
+              <li><a href="#" target="_blank">Documentación</a></li>
+              <li><a href="#" target="_blank">Códigos abiertos</a></li>
+            </ul>
+          </div>
+
+          <!-- Columna 4: Contacto -->
+          <div class="col-md-3">
+            <h6 class="footer-title">Contacto</h6>
+            <ul class="footer-links">
+              <li>
+                <i class="fas fa-envelope me-2"></i>
+                <a href="mailto:maurogarcia20178@gmail.com">maurogarcia20178@gmail.com</a>
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt me-2"></i>
+                San Nicolás de los Arroyos, Buenos Aires
+              </li>
+              <li>
+                <i class="fas fa-phone me-2"></i>
+                <a href="tel:+543364022033">+54 9 336 402 2033</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Separador -->
+        <hr class="footer-divider" />
+
+        <!-- Footer inferior -->
+        <div class="footer-bottom">
+          <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start">
+              <p class="mb-2 mb-md-0 footer-text">
+                &copy; 2025 <strong>Atlas Vet</strong> · FCV-UNR 🐾
+              </p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+              <p class="mb-0 footer-text">
+                <a href="#" class="footer-link-small">Privacidad</a> ·
+                <a href="#" class="footer-link-small">Términos</a> ·
+                <a href="#" class="footer-link-small">Accesibilidad</a>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
 
     <!-- JS Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" defer></script>
+    <script src="../js/main.js" defer></script>
   </body>
 </html>

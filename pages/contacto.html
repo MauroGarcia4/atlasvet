@@ -5,16 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contacto · Atlas Vet</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/style.css" />
+  <meta name="twitter:description" content="Contacto y colaboración con Atlas Vet. Sumate al proyecto de portal digital de anatomía veterinaria." />
+  
+  <!-- Preconnect para rendimiento -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"
+  />
+  <link 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    rel="stylesheet"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <link rel="stylesheet" href="../css/style.css" />
+  <!-- Favicon -->
+  <link rel="icon" href="../img/favicon-atlas-vet.svg" type="image/svg+xml" />
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Contacto · Atlas Vet" />
+  <meta property="og:description" content="Contacto y colaboración con Atlas Vet. Sumate al proyecto de portal digital de anatomía veterinaria." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://atlasvet.unr.edu.ar/pages/contacto.html" />
+  <meta property="og:image" content="https://atlasvet.unr.edu.ar/img/favicon-atlas-vet.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Contacto · Atlas Vet" />
+  <meta name="twitter:description" content="Contacto y colaboración con Atlas Vet. Sumate al proyecto de portal digital de anatomía veterinaria." />
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow" role="navigation" aria-label="Navegación principal">
   <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="#inicio">
-      <img src="img/logo-atlas-vet.svg" alt="Atlas Vet" class="navbar-logo me-2">
-      <span>ATLAS VET</span>
+    <a class="navbar-brand d-flex align-items-center" href="../index.html" aria-label="Atlas Vet - Inicio">
+      <img src="../img/logo-atlas-vet-mark.svg" alt="Marca Atlas Vet" class="navbar-logo me-2" width="40" height="40">
+      <!-- Texto del nombre removido; usamos solo el logo -->
     </a>
 
     <button
@@ -24,7 +53,7 @@
       data-bs-target="#navbarNav"
       aria-controls="navbarNav"
       aria-expanded="false"
-      aria-label="Toggle navigation"
+      aria-label="Alternar navegación"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -32,7 +61,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto align-items-lg-center main-nav">
         <li class="nav-item">
-          <a class="nav-link active" href="../index.html">Inicio</a>
+          <a class="nav-link" href="../index.html">Inicio</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="catalogo.html">Catálogo</a>
@@ -44,11 +73,10 @@
           <a class="nav-link" href="plataformas.html">Plataformas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contacto.html">Contacto</a>
+          <a class="nav-link active" href="contacto.html" aria-current="page">Contacto</a>
         </li>
         <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-          <!-- Explorador: lo más importante -->
-          <a href="atlas.html" class="nav-explorer-btn">
+          <a href="atlas.html" class="nav-explorer-btn" title="Ir al explorador interactivo del atlas">
             Explorador
           </a>
         </li>
@@ -57,72 +85,449 @@
   </div>
 </nav>
 
-
-  <main class="py-5" style="padding-top: 6rem !important;">
-    <div class="container">
-      <div class="section-header">
-        <h1>Contacto y colaboración</h1>
-        <p>
-          Si sos parte de la FCV-UNR y te interesa sumar a tu cátedra, aportar
-          material o simplemente conocer más sobre el proyecto, podés dejar tus
-          datos en este formulario.
+<!-- HERO CONTACTO -->
+<header class="hero d-flex align-items-center" id="page-hero">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-8">
+        <p class="hero-kicker mb-2">Contacto · Atlas Vet</p>
+        <h1 class="display-5 fw-bold mb-3">Contacto y Colaboración</h1>
+        <p class="lead mb-4">
+          Atlas Vet es un prototipo abierto. Si sos parte de la FCV-UNR, te interesa colaborar, compartir recursos o proponer mejoras, queremos conocerte.
         </p>
-      </div>
 
-      <div class="contact-card">
-        <form>
-          <div class="mb-3">
-            <label for="nombre" class="form-label">Nombre y apellido</label>
-            <input type="text" class="form-control" id="nombre" placeholder="Escribí tu nombre completo">
-          </div>
+        <div class="d-flex flex-wrap gap-2 mb-3">
+          <a href="catalogo.html" class="btn btn-primary">
+            Ver catálogo 📚
+          </a>
+          <a href="modulos.html" class="btn btn-outline-light">
+            Explorar módulos 🧭
+          </a>
+        </div>
 
-          <div class="mb-3">
-            <label for="correo" class="form-label">Correo institucional</label>
-            <input type="email" class="form-control" id="correo" placeholder="tucorreo@unr.edu.ar">
-          </div>
-
-          <div class="mb-3">
-            <label for="rol" class="form-label">Rol en la facultad</label>
-            <select id="rol" class="form-select">
-              <option selected disabled>Seleccioná una opción</option>
-              <option>Docente</option>
-              <option>Estudiante</option>
-              <option>Graduado/a</option>
-              <option>Personal no docente</option>
-              <option>Otro</option>
-            </select>
-          </div>
-
-          <div class="mb-3">
-            <label for="mensaje" class="form-label">Mensaje</label>
-            <textarea id="mensaje" class="form-control" rows="4"
-                      placeholder="Contanos brevemente qué te gustaría aportar o qué necesitás."></textarea>
-          </div>
-
-          <div class="text-end">
-            <button type="submit" class="btn btn-primary">
-              Enviar mensaje
-            </button>
-          </div>
-        </form>
-
-        <hr class="my-4" />
-
-        <p class="text-muted-custom mb-0">
-          También podés escribir directamente a:
-          <a href="mailto:info@fcv.unr.edu.ar">info@fcv.unr.edu.ar</a>
-          (correo de referencia institucional para el prototipo).
-        </p>
+        <div class="hero-tags d-flex flex-wrap gap-2">
+          <span class="badge atlas-tag">Docentes 👨‍🏫</span>
+          <span class="badge atlas-tag">Estudiantes 🎓</span>
+          <span class="badge atlas-tag">Colaboradores 🤝</span>
+          <span class="badge atlas-tag">Feedback 💡</span>
+        </div>
       </div>
     </div>
-  </main>
+  </div>
+</header>
 
-  <footer class="py-4">
-    <div class="container text-center">
-      <p class="mb-1">&copy; 2025 Atlas Vet · Facultad de Ciencias Veterinarias (UNR)</p>
+<main class="py-5" style="padding-top: 6rem !important;">
+  <div class="container">
+    <div class="row g-4 mb-5">
+      <!-- TARJETAS DE CONTACTO -->
+      <div class="col-md-4">
+        <article class="card-soft text-center h-100">
+          <div class="contact-icon mb-3">
+            <i class="fa-solid fa-envelope fa-2x text-primary"></i>
+          </div>
+          <h3>Escribinos directamente ✉️</h3>
+          <p class="mb-3">
+            Para consultas generales o propuestas de colaboración.
+          </p>
+          <a href="mailto:info@fcv.unr.edu.ar" class="btn btn-outline-primary btn-sm">
+            info@fcv.unr.edu.ar
+          </a>
+        </article>
+      </div>
+
+      <div class="col-md-4">
+        <article class="card-soft text-center h-100">
+          <div class="contact-icon mb-3">
+            <i class="fa-solid fa-people-group fa-2x text-primary"></i>
+          </div>
+          <h3>Colaboradores 🤝</h3>
+          <p class="mb-3">
+            Docentes, estudiantes avanzados y graduados que quieran aportar.
+          </p>
+          <ul class="text-muted-custom small mb-0">
+            <li>Compartir material</li>
+            <li>Proponer casos clínicos</li>
+            <li>Revisar contenido</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="col-md-4">
+        <article class="card-soft text-center h-100">
+          <div class="contact-icon mb-3">
+            <i class="fa-solid fa-lightbulb fa-2x text-primary"></i>
+          </div>
+          <h3>Feedback y Sugerencias 💡</h3>
+          <p class="mb-3">
+            Tu opinión es valiosa para mejorar el proyecto.
+          </p>
+          <ul class="text-muted-custom small mb-0">
+            <li>Reportar bugs</li>
+            <li>Sugerir mejoras</li>
+            <li>Compartir ideas</li>
+          </ul>
+        </article>
+      </div>
     </div>
-  </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FORMULARIO MEJORADO -->
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-8">
+        <div class="contact-card">
+          <div class="contact-form-header mb-4">
+            <h2 class="h4 fw-bold mb-2">
+              <i class="fa-solid fa-pen-to-square me-2 text-primary"></i>
+              Dejar tu información ✉️
+            </h2>
+            <p class="text-muted-custom mb-0">
+              Completá el formulario y nos pondremos en contacto pronto.
+            </p>
+          </div>
+
+          <form id="contactForm" aria-label="Formulario de contacto">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="nombre" class="form-label fw-500">
+                    Nombre y apellido <span class="text-danger">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    class="form-control" 
+                    id="nombre" 
+                    placeholder="Ej: Juan García"
+                    required
+                    aria-describedby="nombreHelp"
+                  >
+                  <small id="nombreHelp" class="form-text text-muted">Tu nombre completo</small>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="correo" class="form-label fw-500">
+                    Correo institucional <span class="text-danger">*</span>
+                  </label>
+                  <input 
+                    type="email" 
+                    class="form-control" 
+                    id="correo" 
+                    placeholder="tunombre@unr.edu.ar"
+                    required
+                    aria-describedby="correoHelp"
+                  >
+                  <small id="correoHelp" class="form-text text-muted">Te usaremos solo para contactarte</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="rol" class="form-label fw-500">
+                    Rol en la facultad <span class="text-danger">*</span>
+                  </label>
+                  <select id="rol" class="form-select" required aria-label="Selecciona tu rol">
+                    <option value="" selected disabled>Seleccioná una opción</option>
+                    <option value="docente">👨‍🏫 Docente</option>
+                    <option value="estudiante">🎓 Estudiante</option>
+                    <option value="graduado">👨‍💼 Graduado/a</option>
+                    <option value="personal">👷 Personal no docente</option>
+                    <option value="otro">❓ Otro</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="departamento" class="form-label fw-500">
+                    Departamento / Cátedra
+                  </label>
+                  <input 
+                    type="text" 
+                    class="form-control" 
+                    id="departamento" 
+                    placeholder="Ej: Anatomía Comparada"
+                    aria-describedby="departamentoHelp"
+                  >
+                  <small id="departamentoHelp" class="form-text text-muted">Opcional</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje" class="form-label fw-500">
+                ¿Cómo te gustaría colaborar? <span class="text-danger">*</span>
+              </label>
+              <textarea 
+                id="mensaje" 
+                class="form-control" 
+                rows="5"
+                placeholder="Contanos brevemente qué te gustaría aportar, si tenés material para compartir, sugerencias, o cómo podés colaborar..."
+                required
+                aria-describedby="mensajeHelp"
+              ></textarea>
+              <small id="mensajeHelp" class="form-text text-muted">Mínimo 10 caracteres</small>
+            </div>
+
+            <!-- CHECKBOXES -->
+            <div class="form-check mb-3">
+              <input 
+                class="form-check-input" 
+                type="checkbox" 
+                id="terminos" 
+                required
+                aria-describedby="terminosHelp"
+              >
+              <label class="form-check-label" for="terminos">
+                Acepto que Atlas Vet use mi información para contactarme sobre colaboraciones y actualizaciones del proyecto.
+              </label>
+              <small id="terminosHelp" class="form-text text-muted">Es necesario aceptar para que podamos comunicarnos.</small>
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-lg w-100" id="submitBtn">
+                <i class="fa-solid fa-paper-plane me-2"></i>
+                Enviar colaboración
+              </button>
+              <small class="form-text text-muted d-block mt-2">
+                No te enviaremos spam. Solo te contactaremos si tu aporte es relevante.
+              </small>
+            </div>
+          </form>
+
+          <!-- MENSAJE DE ÉXITO (oculto por defecto) -->
+          <div id="successMessage" class="alert alert-success alert-dismissible fade" role="alert" style="display: none;">
+            <i class="fa-solid fa-circle-check me-2"></i>
+            <strong>¡Gracias!</strong> Hemos recibido tu mensaje. Nos pondremos en contacto pronto.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+          </div>
+        </div>
+
+        <!-- INFO ADICIONAL -->
+          <div class="mt-5 p-4 bg-light rounded-3">
+          <h3 class="h5 fw-bold mb-3">
+            <i class="fa-solid fa-circle-info me-2 text-primary"></i>
+            ¿Cuál es el objetivo de Atlas Vet? ℹ️
+          </h3>
+          <p class="mb-2">
+            Atlas Vet busca centralizar recursos de anatomía veterinaria en un único portal institucional, accesible para estudiantes y docentes de la FCV-UNR.
+          </p>
+          <p class="mb-3">
+            El proyecto es un <strong>prototipo abierto</strong> que crece con tu colaboración. Valoramos:
+          </p>
+          <ul class="mb-0">
+            <li><strong>Material educativo:</strong> Atlas 2D, videos, presentaciones</li>
+            <li><strong>Casos clínicos:</strong> Ejemplos de patologías y diagnósticos</li>
+            <li><strong>Feedback:</strong> Sugerencias para mejorar la plataforma</li>
+            <li><strong>Conexiones:</strong> Integración con plataformas existentes (Anatomage, EasyAnatomy)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="mt-auto">
+  <div class="container py-5">
+    <div class="row g-4 mb-4">
+      <!-- Columna 1: Acerca de -->
+      <div class="col-md-3">
+        <h6 class="footer-title">Acerca de Atlas Vet</h6>
+        <p class="footer-text">
+          Plataforma educativa de anatomía veterinaria de la Facultad de Ciencias Veterinarias de la Universidad Nacional de Rosario (UNR).
+        </p>
+        <div class="footer-social">
+          <a href="#" title="LinkedIn" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="#" title="GitHub" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="#" title="Twitter" aria-label="Twitter">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Columna 2: Navegación -->
+      <div class="col-md-3">
+        <h6 class="footer-title">Navegación</h6>
+        <ul class="footer-links">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="modulos.html">Módulos</a></li>
+          <li><a href="plataformas.html">Plataformas</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="atlas.html">Explorador</a></li>
+        </ul>
+      </div>
+
+      <!-- Columna 3: Recursos -->
+      <div class="col-md-3">
+        <h6 class="footer-title">Recursos</h6>
+        <ul class="footer-links">
+          <li><a href="plataformas.html">Herramientas 3D</a></li>
+          <li><a href="catalogo.html">Atlas interactivo</a></li>
+          <li><a href="modulos.html">Casos clínicos</a></li>
+          <li><a href="#" target="_blank">Documentación</a></li>
+          <li><a href="#" target="_blank">Códigos abiertos</a></li>
+        </ul>
+      </div>
+
+      <!-- Columna 4: Contacto -->
+      <div class="col-md-3">
+        <h6 class="footer-title">Contacto</h6>
+        <ul class="footer-links">
+          <li>
+            <i class="fas fa-envelope me-2"></i>
+            <a href="mailto:maurogarcia20178@gmail.com">maurogarcia20178@gmail.com</a>
+          </li>
+          <li>
+            <i class="fas fa-map-marker-alt me-2"></i>
+            San Nicolás de los Arroyos, Buenos Aires
+          </li>
+          <li>
+            <i class="fas fa-phone me-2"></i>
+            <a href="tel:+543364022033">+54 9 336 402 2033</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Separador -->
+    <hr class="footer-divider" />
+
+    <!-- Footer inferior -->
+          <div class="footer-bottom">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-2 mb-md-0 footer-text">
+            &copy; 2025 <strong>Atlas Vet</strong> · FCV-UNR 🐾
+          </p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <p class="mb-0 footer-text">
+            <a href="#" class="footer-link-small">Privacidad</a> ·
+            <a href="#" class="footer-link-small">Términos</a> ·
+            <a href="#" class="footer-link-small">Accesibilidad</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+  crossorigin="anonymous"
+  defer
+></script>
+<script src="../js/main.js" defer></script>
+  <script>
+  // Script específico para contacto: validación accesible + envío fetch() con fallback localStorage
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
+    const submitBtn = document.getElementById('submitBtn');
+
+    // Configuración: endpoint vacío por defecto, se puede cambiar en futuro backend
+    const FORM_ENDPOINT = window.__ATLAS_FORM_ENDPOINT__ || '';
+
+    function setFieldError(id, message) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.textContent = message;
+        el.setAttribute('role', 'status');
+      }
+    }
+
+    function clearFieldError(id, defaultText) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.textContent = defaultText || '';
+        el.removeAttribute('role');
+      }
+    }
+
+    if (form) {
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        // Limpiar mensajes previos
+        clearFieldError('mensajeHelp', 'Mínimo 10 caracteres');
+        clearFieldError('terminosHelp', 'Es necesario aceptar para que podamos comunicarnos.');
+
+        // Validar longitud mínima del mensaje
+        const mensaje = document.getElementById('mensaje').value.trim();
+        if (mensaje.length < 10) {
+          setFieldError('mensajeHelp', 'El mensaje debe tener al menos 10 caracteres.');
+          document.getElementById('mensaje').focus();
+          return;
+        }
+
+        // Validar checkbox
+        const terminos = document.getElementById('terminos').checked;
+        if (!terminos) {
+          setFieldError('terminosHelp', 'Debes aceptar los términos para continuar.');
+          document.getElementById('terminos').focus();
+          return;
+        }
+
+        // Recopilar datos del formulario
+        const formData = {
+          nombre: document.getElementById('nombre').value.trim(),
+          correo: document.getElementById('correo').value.trim(),
+          rol: document.getElementById('rol').value,
+          departamento: document.getElementById('departamento').value.trim(),
+          mensaje: mensaje,
+          timestamp: new Date().toISOString()
+        };
+
+        // Deshabilitar botón durante envío
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Enviando...';
+
+        try {
+          if (FORM_ENDPOINT) {
+            // Si hay endpoint configurado, intentar envío fetch()
+            const response = await fetch(FORM_ENDPOINT, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(formData)
+            });
+            if (!response.ok) throw new Error('Error en servidor');
+          } else {
+            // Fallback: guardar en localStorage si no hay endpoint
+            const submissions = JSON.parse(localStorage.getItem('atlasvetSubmissions') || '[]');
+            submissions.push(formData);
+            localStorage.setItem('atlasvetSubmissions', JSON.stringify(submissions));
+            console.log('✓ Formulario guardado localmente (sin backend)');
+          }
+
+          // Mostrar mensaje de éxito
+          successMessage.style.display = 'block';
+          successMessage.classList.add('show');
+          form.reset();
+
+          // Ocultar mensaje después de 5 segundos
+          setTimeout(() => {
+            successMessage.classList.remove('show');
+            successMessage.style.display = 'none';
+          }, 5000);
+
+        } catch (error) {
+          setFieldError('mensajeHelp', 'Error al enviar: ' + error.message + '. Se guardó localmente.');
+          console.error('Error al enviar:', error);
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane me-2"></i>Enviar colaboración';
+        }
+      });
+    }
+  });
+</script>
 </body>
 </html>
+

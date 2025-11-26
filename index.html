@@ -3,39 +3,92 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Atlas Vet – Anatomía veterinaria digital</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Atlas Vet – Anatomía veterinaria digital | FCV-UNR</title>
 
     <meta
       name="description"
       content="Atlas Vet unifica atlas, modelos 3D, casos clínicos y herramientas de evaluación para la enseñanza de la anatomía veterinaria en la FCV-UNR."
     />
+    <meta name="keywords" content="anatomía veterinaria, atlas digital, educación veterinaria, FCV-UNR" />
+    <meta name="author" content="Facultad de Ciencias Veterinarias - UNR" />
+    <meta name="theme-color" content="#002f52" />
+    <link rel="canonical" href="https://atlasvet.unr.edu.ar/" />
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Atlas Vet – Anatomía veterinaria digital | FCV-UNR" />
+    <meta property="og:description" content="Atlas Vet unifica atlas, modelos 3D, casos clínicos y herramientas de evaluación para la enseñanza de la anatomía veterinaria en la FCV-UNR." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://atlasvet.unr.edu.ar/" />
+    <meta property="og:image" content="https://atlasvet.unr.edu.ar/img/favicon-atlas-vet.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Atlas Vet – Anatomía veterinaria digital | FCV-UNR" />
+    <meta name="twitter:description" content="Atlas Vet unifica atlas, modelos 3D, casos clínicos y herramientas de evaluación para la enseñanza de la anatomía veterinaria en la FCV-UNR." />
+    
+    <!-- Preconnect para rendimiento -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    
+    <!-- JSON-LD: Organization + WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Atlas Vet",
+      "url": "https://atlasvet.unr.edu.ar",
+      "logo": "https://atlasvet.unr.edu.ar/img/favicon-atlas-vet.svg",
+      "description": "Portal digital de anatomía veterinaria para la Facultad de Ciencias Veterinarias - UNR",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+54-341",
+        "contactType": "Customer Support",
+        "email": "atlasvet@fcv.unr.edu.ar"
+      },
+      "sameAs": ["https://github.com/MauroGarcia4/atlasvet"]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Atlas Vet",
+      "url": "https://atlasvet.unr.edu.ar",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://atlasvet.unr.edu.ar/pages/catalogo.html"
+        }
+      }
+    }
+    </script>
 
     <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
     />
     <!-- Iconos -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       rel="stylesheet"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
-    <!-- CSS propio (desde /pages -> /css) -->
-    <link rel="stylesheet" href="../css/style.css" />
-    <!-- Favicon opcional -->
-    <!-- <link rel="icon" type="image/svg+xml" href="../img/favicon-atlas-vet.svg" /> -->
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon-atlas-vet.svg" type="image/svg+xml" />
   </head>
   <body>
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow" role="navigation" aria-label="Navegación principal">
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="index.html#inicio">
-          <img
-            src="../img/logo-atlas-vet.svg"
-            alt="Atlas Vet"
-            class="navbar-logo me-2"
-          />
-          <span>ATLAS VET</span>
+        <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="Atlas Vet - Inicio">
+          <img src="img/logo-atlas-vet-mark.svg" alt="Marca Atlas Vet" class="navbar-logo me-2" width="40" height="40" />
+          <!-- Texto del nombre removido; usamos solo el logo -->
         </a>
 
         <button
@@ -45,7 +98,7 @@
           data-bs-target="#navbarNav"
           aria-controls="navbarNav"
           aria-expanded="false"
-          aria-label="Toggle navigation"
+          aria-label="Alternar navegación"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -53,24 +106,22 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto align-items-lg-center main-nav">
             <li class="nav-item">
-              <!-- ESTA PÁGINA: Inicio activo -->
-              <a class="nav-link active" href="index.html#inicio">Inicio</a>
+              <a class="nav-link active" href="index.html" aria-current="page">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="catalogo.html">Catálogo</a>
+              <a class="nav-link" href="pages/catalogo.html">Catálogo</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="modulos.html">Módulos</a>
+              <a class="nav-link" href="pages/modulos.html">Módulos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="plataformas.html">Plataformas</a>
+              <a class="nav-link" href="pages/plataformas.html">Plataformas</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contacto.html">Contacto</a>
+              <a class="nav-link" href="pages/contacto.html">Contacto</a>
             </li>
             <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-              <!-- Explorador: lo más importante -->
-              <a href="atlas.html" class="nav-explorer-btn">
+              <a href="pages/atlas.html" class="nav-explorer-btn" title="Ir al explorador interactivo del atlas">
                 Explorador
               </a>
             </li>
@@ -98,11 +149,11 @@
             </p>
 
             <div class="d-flex flex-wrap gap-2 mb-3">
-              <a href="catalogo.html" class="btn btn-primary">
-                Ver catálogo de contenidos
+              <a href="pages/catalogo.html" class="btn btn-primary">
+                Ver catálogo de contenidos 📚
               </a>
-              <a href="atlas.html" class="btn btn-outline-light">
-                Probar explorador del atlas
+              <a href="pages/atlas.html" class="btn btn-outline-light">
+                Probar explorador del atlas 🧭
               </a>
             </div>
 
@@ -135,7 +186,7 @@
               <div class="row g-3">
                 <div class="col-sm-6">
                   <div class="mini-card h-100">
-                    <h6 class="mb-1">Un solo acceso</h6>
+                    <h6 class="mb-1">Un solo acceso 🔑</h6>
                     <p class="mini-muted mb-2">
                       Punto de entrada único para estudiantes y docentes de
                       todas las cátedras de anatomía.
@@ -144,7 +195,7 @@
                 </div>
                 <div class="col-sm-6">
                   <div class="mini-card h-100">
-                    <h6 class="mb-1">Contenido curado</h6>
+                    <h6 class="mb-1">Contenido curado ✅</h6>
                     <p class="mini-muted mb-2">
                       Recursos revisados por docentes, integrando material
                       propio y plataformas externas.
@@ -153,7 +204,7 @@
                 </div>
                 <div class="col-sm-6">
                   <div class="mini-card h-100">
-                    <h6 class="mb-1">Enfoque por sistemas</h6>
+                    <h6 class="mb-1">Enfoque por sistemas 🧭</h6>
                     <p class="mini-muted mb-2">
                       Navegación por especie y sistema para acompañar el
                       programa de las materias.
@@ -162,7 +213,7 @@
                 </div>
                 <div class="col-sm-6">
                   <div class="mini-card h-100">
-                    <h6 class="mb-1">Escalable</h6>
+                    <h6 class="mb-1">Escalable ⚙️</h6>
                     <p class="mini-muted mb-2">
                       Pensado para sumar nuevos modelos, casos y evaluaciones a
                       lo largo del tiempo.
@@ -177,10 +228,10 @@
     </header>
 
     <!-- SECCIÓN: Qué es Atlas Vet -->
-    <section class="py-5 bg-light">
+    <section class="py-5 bg-light" aria-labelledby="about-heading">
       <div class="container">
         <div class="section-header">
-          <h2>¿Qué es Atlas Vet?</h2>
+          <h2 id="about-heading">¿Qué es Atlas Vet?</h2>
           <p>
             Un proyecto de portal digital para anatomía veterinaria, que busca
             centralizar recursos y mejorar la experiencia de estudio en la
@@ -188,45 +239,45 @@
           </p>
         </div>
 
-        <div class="row g-4">
+          <div class="row g-4">
           <div class="col-md-4">
-            <div class="card-soft h-100">
-              <h5>Unificación de recursos</h5>
+            <article class="card-soft h-100">
+              <h3>📚 Unificación de recursos</h3>
               <p>
                 Reúne atlas 2D, modelos 3D, videos, casos clínicos y bancos de
                 preguntas que hoy están dispersos en distintas plataformas.
               </p>
-            </div>
+            </article>
           </div>
           <div class="col-md-4">
-            <div class="card-soft h-100">
-              <h5>Enfoque académico</h5>
+            <article class="card-soft h-100">
+              <h3>🎓 Enfoque académico</h3>
               <p>
                 Se construye a partir de las necesidades reales de las cátedras,
                 respetando la terminología y los planes de estudio de la
                 facultad.
               </p>
-            </div>
+            </article>
           </div>
           <div class="col-md-4">
-            <div class="card-soft h-100">
-              <h5>Base para futuros desarrollos</h5>
+            <article class="card-soft h-100">
+              <h3>🚀 Base para futuros desarrollos</h3>
               <p>
                 El portal puede conectarse a futuro con campus virtual,
                 analíticas de uso, y herramientas de autor para que los docentes
                 generen su propio material.
               </p>
-            </div>
+            </article>
           </div>
         </div>
       </div>
     </section>
 
     <!-- SECCIÓN: Cómo funciona -->
-    <section class="py-5">
+    <section class="py-5" aria-labelledby="how-heading">
       <div class="container">
         <div class="section-header">
-          <h2>¿Cómo funciona?</h2>
+          <h2 id="how-heading">¿Cómo funciona?</h2>
           <p>
             El proyecto se organiza en módulos independientes. Cada módulo tiene
             su propia página y puede crecer de forma gradual.
@@ -235,80 +286,80 @@
 
         <div class="row g-4">
           <div class="col-md-4">
-            <div class="card-soft h-100">
-              <h5>1. Catálogo</h5>
+            <article class="card-soft h-100">
+              <h3>1. Catálogo</h3>
               <p>
                 Estructuras organizadas por especie y sistema. Desde aquí se
                 accede a todos los recursos disponibles para cada tema.
               </p>
-              <a href="catalogo.html" class="btn btn-outline-primary btn-sm">
-                Ver catálogo
+              <a href="pages/catalogo.html" class="btn btn-outline-primary btn-sm">
+                Ver catálogo <span class="visually-hidden">de contenidos</span>
               </a>
-            </div>
+            </article>
           </div>
           <div class="col-md-4">
-            <div class="card-soft h-100">
-              <h5>2. Módulos didácticos</h5>
+            <article class="card-soft h-100">
+              <h3>2. Módulos didácticos</h3>
               <p>
                 Conjunto de módulos: atlas 3D, correlación clínica, evaluaciones
                 y recursos abiertos. Cada módulo tiene objetivos claros.
               </p>
-              <a href="modulos.html" class="btn btn-outline-primary btn-sm">
-                Ver módulos
+              <a href="pages/modulos.html" class="btn btn-outline-primary btn-sm">
+                Ver módulos <span class="visually-hidden">didácticos</span>
               </a>
-            </div>
+            </article>
           </div>
           <div class="col-md-4">
-            <div class="card-soft h-100">
-              <h5>3. Plataformas asociadas</h5>
+            <article class="card-soft h-100">
+              <h3>3. Plataformas asociadas</h3>
               <p>
                 Integración con herramientas como Anatomage, EasyAnatomy, IVALA
                 Learn y proyectos de código abierto.
               </p>
-              <a href="plataformas.html" class="btn btn-outline-primary btn-sm">
-                Ver plataformas
+              <a href="pages/plataformas.html" class="btn btn-outline-primary btn-sm">
+                Ver plataformas <span class="visually-hidden">asociadas</span>
               </a>
-            </div>
+            </article>
           </div>
         </div>
       </div>
     </section>
 
     <!-- SECCIÓN: Para quién es -->
-    <section class="py-5 bg-light">
+    <section class="py-5 bg-light" aria-labelledby="for-heading">
       <div class="container">
         <div class="section-header">
-          <h2>¿Para quién está pensado?</h2>
+          <h2 id="for-heading">¿Para quién está pensado?</h2>
         </div>
 
         <div class="row g-4">
           <div class="col-md-4">
-            <div class="card-soft h-100">
-              <h5>Estudiantes</h5>
+            <article class="card-soft h-100">
+              <h3>Para estudiantes</h3>
               <p>
                 Un lugar claro donde encontrar todo lo necesario para cursar
                 anatomía en cada año de la carrera, organizado por comisiones y
                 cátedras.
               </p>
-            </div>
+            </article>
           </div>
           <div class="col-md-4">
-            <div class="card-soft h-100">
-              <h5>Docentes</h5>
+            <article class="card-soft h-100">
+              <h3>Para docentes</h3>
               <p>
                 Un entorno para compartir material, sugerir recursos y, a
                 futuro, cargar casos propios y bancos de preguntas.
               </p>
-            </div>
+            </article>
           </div>
           <div class="col-md-4">
-            <div class="card-soft h-100">
-              <h5>Equipo institucional</h5>
+            <article class="card-soft h-100">
+              <h3>Para equipo institucional</h3>
               <p>
                 Una base para medir uso de recursos, detectar necesidades y
                 coordinar proyectos de innovación educativa en anatomía.
               </p>
-            </div>
+            </article>
           </div>
         </div>
       </div>
@@ -323,26 +374,111 @@
           graduados y estudiantes avanzados puedan sumar contenido, validar la
           propuesta y orientar las próximas etapas.
         </p>
-        <a href="contacto.html" class="btn btn-primary">
+        <a href="pages/contacto.html" class="btn btn-primary">
           Quiero saber cómo sumarme
         </a>
       </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="py-4">
-      <div class="container text-center">
-        <p class="mb-1">
-          &copy; 2025 Atlas Vet · Facultad de Ciencias Veterinarias (UNR)
-        </p>
-        <p class="mb-0">
-          Prototipo de portal digital para la enseñanza de la anatomía
-          veterinaria.
-        </p>
+    <footer class="mt-auto">
+      <div class="container py-5">
+        <div class="row g-4 mb-4">
+          <!-- Columna 1: Acerca de -->
+          <div class="col-md-3">
+            <h6 class="footer-title">Acerca de Atlas Vet</h6>
+            <p class="footer-text">
+              Plataforma educativa de anatomía veterinaria de la Facultad de Ciencias Veterinarias de la Universidad Nacional de Rosario (UNR).
+            </p>
+            <div class="footer-social">
+              <a href="#" title="LinkedIn" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="#" title="GitHub" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="#" title="Twitter" aria-label="Twitter">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Columna 2: Navegación -->
+          <div class="col-md-3">
+            <h6 class="footer-title">Navegación</h6>
+            <ul class="footer-links">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="pages/catalogo.html">Catálogo</a></li>
+              <li><a href="pages/modulos.html">Módulos</a></li>
+              <li><a href="pages/plataformas.html">Plataformas</a></li>
+              <li><a href="pages/contacto.html">Contacto</a></li>
+              <li><a href="pages/atlas.html">Explorador</a></li>
+            </ul>
+          </div>
+
+          <!-- Columna 3: Recursos -->
+          <div class="col-md-3">
+            <h6 class="footer-title">Recursos</h6>
+            <ul class="footer-links">
+              <li><a href="pages/plataformas.html">Herramientas 3D</a></li>
+              <li><a href="pages/catalogo.html">Atlas interactivo</a></li>
+              <li><a href="pages/modulos.html">Casos clínicos</a></li>
+              <li><a href="#" target="_blank">Documentación</a></li>
+              <li><a href="#" target="_blank">Códigos abiertos</a></li>
+            </ul>
+          </div>
+
+          <!-- Columna 4: Contacto -->
+          <div class="col-md-3">
+            <h6 class="footer-title">Contacto</h6>
+            <ul class="footer-links">
+              <li>
+                <i class="fas fa-envelope me-2"></i>
+                <a href="mailto:maurogarcia20178@gmail.com">maurogarcia20178@gmail.com</a>
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt me-2"></i>
+                San Nicolás de los Arroyos, Buenos Aires
+              </li>
+              <li>
+                <i class="fas fa-phone me-2"></i>
+                <a href="tel:+543364022033">+54 9 336 402 2033</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Separador -->
+        <hr class="footer-divider" />
+
+        <!-- Footer inferior -->
+        <div class="footer-bottom">
+          <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start">
+              <p class="mb-2 mb-md-0 footer-text">
+                &copy; 2025 <strong>Atlas Vet</strong> · FCV-UNR 🐾
+              </p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+              <p class="mb-0 footer-text">
+                <a href="#" class="footer-link-small">Privacidad</a> ·
+                <a href="#" class="footer-link-small">Términos</a> ·
+                <a href="#" class="footer-link-small">Accesibilidad</a>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
 
     <!-- JS Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <!-- Script personalizado -->
+    <script src="js/main.js" defer></script>
   </body>
 </html>
